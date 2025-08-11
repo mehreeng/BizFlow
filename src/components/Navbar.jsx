@@ -8,11 +8,13 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#home')
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Our Service" },
-    { href: "#testimonials", label: "Testimonials" },
-  ]
+  { href: "/", label: "Home" },
+  { href: "#about", label: "About Us" },
+  { href: "#services", label: "Our Service" },
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "/partner", label: "Partner" } // <-- yeh naya link
+]
+
 
   return (
     <motion.nav 

@@ -1,10 +1,10 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Partner = () => {
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -26,8 +26,10 @@ const Partner = () => {
         variants={fadeIn("up", 0.4)}
         className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10"
       >
-        Join hands with us to grow together. Fill out the form below, and our team will reach out soon!
+        Join hands with us to grow together. Fill out the form below, and our
+        team will reach out soon!
       </motion.p>
+
       <motion.form
         variants={fadeIn("up", 0.5)}
         className="bg-white shadow-lg rounded-lg p-8 max-w-xl mx-auto space-y-6"
@@ -53,7 +55,9 @@ const Partner = () => {
         </div>
 
         <div>
-          <label className="block text-gray-700 font-medium mb-2">Company Name</label>
+          <label className="block text-gray-700 font-medium mb-2">
+            Company Name
+          </label>
           <input
             type="text"
             placeholder="Your company name"
@@ -79,15 +83,15 @@ const Partner = () => {
         </motion.button>
       </motion.form>
 
-      <motion.div
-        variants={fadeIn("up", 0.6)}
-        className="mt-16 text-center"
-      >
+      <motion.div variants={fadeIn("up", 0.6)} className="mt-16 text-center">
         <h2 className="text-2xl font-bold mb-4">How to Reach Us</h2>
         <p className="text-gray-600">📍 123 BizFlow Street, Mumbai, India</p>
         <p className="text-gray-600">📧 contact@bizflow.com</p>
         <p className="text-gray-600">📞 +91 98765 XXXXX</p>
       </motion.div>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
     </motion.section>
   );
 };

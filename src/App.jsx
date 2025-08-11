@@ -12,6 +12,7 @@ import TestimonialsSection from './components/TestimonialsSection'
 import NewsletterSection from './components/NewsletterSection'
 import Footer from './components/Footer'
 import Partner from './pages/Partner'
+import ScrollToTopButton from './components/ScrollToTopButton' // ✅ New import
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                   <ServicesSection />
                   <TestimonialsSection />
                   <NewsletterSection />
+                  <ScrollToTopButton /> {/* ✅ Added here */}
                 </>
               }
             />

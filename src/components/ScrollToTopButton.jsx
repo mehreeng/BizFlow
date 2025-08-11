@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,7 @@ const ScrollToTopButton = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  // Click par upar le jana
+  // Scroll top pe le jana
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,9 +30,10 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition"
+        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-800 text-white p-3 rounded-full shadow-lg transition duration-300"
+        aria-label="Scroll to top"
       >
-        ↑
+        <FaArrowUp />
       </button>
     )
   );
